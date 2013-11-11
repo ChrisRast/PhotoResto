@@ -9,13 +9,15 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
-    <content src="index.html" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
+    <author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
+        Chris
+    </author>
+    <content src="index.html" />
+    <preference name="fullscreen" value="false" />
+    <preference name="Orientation" value="default" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="KeepRunning" value="false" />
 </widget>

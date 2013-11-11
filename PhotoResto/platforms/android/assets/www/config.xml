@@ -2,13 +2,17 @@
 <widget id="ch.comem.photoresto" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>PhotoResto</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Locate and rate restaurants with others and add pictures !
     </description>
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
+        Chris
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="fullscreen" value="true" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="fullscreen" value="false" />
+    <preference name="Orientation" value="default" />
     <preference name="webviewbounce" value="true" />
+	<preference name="KeepRunning" value="false"/>
+
 </widget>
