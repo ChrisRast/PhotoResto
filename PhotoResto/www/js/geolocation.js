@@ -1,23 +1,17 @@
-$(function () {
-	// wait for device API libraries to load
-	//
-	document.addEventListener("deviceready", onDeviceReady, false);
+// wait for device API libraries to load
+//
+document.addEventListener("deviceready", onDeviceReady, false);
 
-	var watchID = null;
-	// device APIs are available
-	//
+//var watchID = null;
+// device APIs are available
 
-	function onDeviceReady() {
-		$('#getPosition').on('vclick', startWatchPosition);
-	}
+function onDeviceReady() {
+	$('#getPosition').on('vclick', getPosition);
+}
 
-})
-
-
-function startWatchPosition() {
+function getPosition() {
 	var options = {
 		maximumAge: 3000,
-		timeout: 5000,
 		enableHighAccuracy: true
 	};
 	navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
