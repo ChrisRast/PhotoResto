@@ -11,6 +11,7 @@
 # generated files
 bin/
 gen/
+bin/build.prop
 
 # Ignore gradle files
 .gradle/
