@@ -24,9 +24,12 @@ C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\a
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\spec \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\spec.html \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\css\index.css \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\css\jquery.mobile-1.3.2.min.css \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\img\logo.png \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\js\geolocation.js \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\js\index.js \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\js\jquery-2.0.3.min.js \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\js\jquery.mobile-1.3.2.min.js \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\assets\www\plugins\org.apache.cordova.geolocation\www\Coordinates.js \
