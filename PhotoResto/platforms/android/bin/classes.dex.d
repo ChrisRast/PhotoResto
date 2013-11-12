@@ -11,5 +11,4 @@ C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\a
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\GeoBroker.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\GPSListener.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\NetworkListener.class \
-C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\R.java.d \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\dexedLibs\cordova-3.1.0-b3f71ee01531e3888b0bc71ce78976b5.jar \
