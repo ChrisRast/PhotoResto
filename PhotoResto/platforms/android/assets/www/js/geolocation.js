@@ -49,6 +49,6 @@ function onError(error) {
 }
 //Must be called to stop watching the position.
 
-function stopWatchPosition() {
-	navigator.geolocation.clearWatch(watchID);
-}
+//function stopWatchPosition() {
+//	navigator.geolocation.clearWatch(watchID);
+//}
