@@ -1,16 +1,17 @@
 function getPhoto() {
-	navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, {
+	var options = {
 		quality: 80,
 		destinationType: Camera.DestinationType.DATA_URL,
 		sourceType: Camera.PictureSourceType.CAMERA,
 		encodingType: Camera.EncodingType.JPEG,
 		saveToPhotoAlbum: true
-	});
+	};
+	navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, options);
 
 }
 
 function onPhotoSuccess(imageData) {
-	$('#photo img').attr('src', "data:image/jpeg;base64," + imageData);
+	var photo = imageData;
 }
 
 function onPhotoFail(message) {

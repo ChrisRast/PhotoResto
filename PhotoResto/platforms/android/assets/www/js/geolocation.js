@@ -28,11 +28,11 @@ function onPositionSuccess(position) {
 		'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '<br/>' +
 		'Heading: ' + position.coords.heading + '<br/>' +
 		'Speed: ' + position.coords.speed + '<br/>')
+	return position;
 }
 
 // Show an alert if there is a problem getting the geolocation
 //
-
 function onPositionError(error) {
 	alert('code: ' + error.code + '\n' +
 		'message: ' + error.message + '\n');
