@@ -1,17 +1,18 @@
 function getPhoto() {
 	var options = {
-		quality: 80,
+		quality: 100,
 		destinationType: Camera.DestinationType.DATA_URL,
 		sourceType: Camera.PictureSourceType.CAMERA,
-		encodingType: Camera.EncodingType.JPEG,
-		saveToPhotoAlbum: true
+		saveToPhotoAlbum: true,
+		correctOrientation: false,
+		encodingType: Camera.EncodingType.JPEG
 	};
 	navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, options);
 
 }
 
 function onPhotoSuccess(imageData) {
-	var photo = imageData;
+	$('#geolocation').trigger('foundPhoto', [imageData]);
 }
 
 function onPhotoFail(message) {
