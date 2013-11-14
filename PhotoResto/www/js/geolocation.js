@@ -1,28 +1,15 @@
-// wait for device API libraries to load
-//
-document.addEventListener("deviceready", onDeviceReady, false);
-
-//var watchID = null;
-// device APIs are available
-
-function onDeviceReady() {
-	$('#getPosition').on('vclick', getPosition);
-}
-
 function getPosition() {
 	var options = {
 		maximumAge: 3000,
-		enableHighAccuracy: true
+		enableHighAccuracy: false
 	};
-	navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
-	//	watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
-
+	navigator.geolocation.getCurrentPosition(onPositionSuccess, onPositionError, options);
 }
 
 // Display `Position` properties from the geolocation
 //
 
-function onSuccess(position) {
+function onPositionSuccess(position) {
 	var div = document.getElementById('geolocation');
 	div.innerHTML = '';
 	div.innerHTML = 'Latitude: ' + position.coords.latitude + '<br/>' +
@@ -37,12 +24,7 @@ function onSuccess(position) {
 // Show an alert if there is a problem getting the geolocation
 //
 
-function onError(error) {
+function onPositionError(error) {
 	alert('code: ' + error.code + '\n' +
 		'message: ' + error.message + '\n');
 }
-//Must be called to stop watching the position.
-
-//function stopWatchPosition() {
-//	navigator.geolocation.clearWatch(watchID);
-//}

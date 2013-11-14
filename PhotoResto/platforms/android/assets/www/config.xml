@@ -13,6 +13,6 @@
     <preference name="fullscreen" value="false" />
     <preference name="Orientation" value="default" />
     <preference name="webviewbounce" value="true" />
-	<preference name="KeepRunning" value="false"/>
+	<preference name="KeepRunning" value="true"/>
 
 </widget>

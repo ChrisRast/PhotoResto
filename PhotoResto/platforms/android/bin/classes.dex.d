@@ -6,6 +6,9 @@ C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\a
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\ch\comem\photoresto\R$string.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\ch\comem\photoresto\R$xml.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\ch\comem\photoresto\R.class \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\camera\CameraLauncher.class \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\camera\ExifHelper.class \
+C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\camera\FileHelper.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\CordovaLocationListener$LocationTimeoutTask.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\CordovaLocationListener.class \
 C:\Users\Chris\Documents\Etudes\HEIG-VD\GesCon\PhotoResto\PhotoResto\platforms\android\bin\classes\org\apache\cordova\geolocation\GeoBroker.class \
