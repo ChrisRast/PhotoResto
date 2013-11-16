@@ -27,6 +27,14 @@ body {
 }
 */
 
+.page {
+	height: 100%;
+}
+[data-role="footer"] {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
 .smallPic {
 	width: 100%;
 }
@@ -43,4 +51,13 @@ body {
 #optionPhoto {
 	max-width: 49%;
 	float: right;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
 }
