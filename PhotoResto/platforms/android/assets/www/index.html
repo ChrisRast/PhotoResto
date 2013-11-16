@@ -21,7 +21,7 @@
 
 <body>
 
-	<div id="accueil" data-role="page">
+	<div class="page" id="home" data-role="page">
 		<div data-role="header">
 			<h1>PhotoResto</h1>
 		</div>
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 
-	<div id="remplirFiche" data-role="page">
+	<div class="page" id="remplirFiche" data-role="page">
 		<div data-role="header">
 			<h1>Soumettre Resto</h1>
 		</div>
@@ -43,10 +43,16 @@
 				<div id="optionPhoto">
 					<input type="button" class="getPicture" value="Changer" />
 					<p id="position"></p>
+					<input type="button" class="getPosition" value="Changer" />
 				</div>
+			</div>
+			<div class="infoResto">
 			</div>
 		</div>
 		<div data-role="footer">
+			<a data-role="button" class="left cancel" href="#home">Annuler</a>
+			<a data-role="button" class="right submitResto" href="">Soumettre le Resto</a>
+			<div class="clear"></div>
 		</div>
 	</div>
 

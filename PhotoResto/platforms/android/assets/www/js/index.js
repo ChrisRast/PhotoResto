@@ -2,7 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-	$('#accueil,#remplirFiche').on('vclick', '.getPicture', getPhoto);
+	$('.page').on('vclick', '.getPicture', getPhoto);
 	$('#photo').on('foundPhoto', function (event, photoB64) {
 		var img = $('<img>');
 		img.attr('src', 'data:image/jpeg;base64,' + photoB64).addClass('smallPic');
@@ -15,5 +15,9 @@ function onDeviceReady() {
 		$(this).trigger('endPosition');
 	});
 	$('#photo').on('endPhoto', getPosition);
-
+	$('.page').on('vclick', '.getPosition', getPosition);
+	$('#remplirFiche .cancel').on('vclick', function(){
+		$('#photo').empty();
+		$('#position').empty();
+	})
 }
