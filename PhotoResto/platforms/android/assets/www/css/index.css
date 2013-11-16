@@ -1,73 +1,46 @@
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#2a2a2a;
-    background-image:linear-gradient(top, #676767 0%, #2a2a2a 51%);
-    background-image:-webkit-linear-gradient(top, #676767 0%, #2a2a2a 51%);
-    background-image:-ms-linear-gradient(top, #676767 0%, #2a2a2a 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #676767),
-        color-stop(0.51, #2a2a2a)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:2em;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
-	color:#000;
-}
-
-/* Portrait layout (default) */
-.app {
-    height:50%;                   /* text area height */
-    width:50%;                   /* text area width */
-    text-align:center;
-	margin: auto;
-}
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-    }
-}
-
-h1 {
-    font-size:100%;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+	-webkit-touch-callout: none;
+	/*	 prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;
+	/* prevent webkit from resizing text to fit*/
+	-webkit-user-select: none;
+	/*	 prevent copy paste, to allow, change 'none' to 'text' */
+	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
 	color: #000;
 }
-.smallPic {
-	width:100%;
-}
+/* Portrait layout (default) */
+
+/* Landscape layout (with min-width) */
+
 /*
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
 }
 */
+
+.smallPic {
+	width: 100%;
+}
+.infoPhoto {
+	height: 30%;
+	width: 100%;
+	padding: 1%;
+}
+#photo {
+	max-width: 49%;
+	height: 100%;
+	float: left;
+}
+#optionPhoto {
+	max-width: 49%;
+	float: right;
+}

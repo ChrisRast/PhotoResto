@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="format-detection" content="telephone=no" />
-		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-		<!-- DO NOT REMOVE, NEEDED TO RUN -->
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
-		<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>
-		<script type="text/javascript" src="cordova.js"></script>
-		<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
-		<title>PhotoResto!</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript" src="js/geolocation.js"></script>
-		<script type="text/javascript" src="js/camera.js"></script>
-	</head>
-	<body>
-		<div class="app">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<!-- DO NOT REMOVE, NEEDED TO RUN -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
+	<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
+	<title>PhotoResto!</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/geolocation.js"></script>
+	<script type="text/javascript" src="js/camera.js"></script>
+</head>
+
+<body>
+
+	<div id="accueil" data-role="page">
+		<div data-role="header">
 			<h1>PhotoResto</h1>
-			<a data-role="button" id="getPicture" href="#">Prendre en photo un Resto</a>
-			<a data-role="button" id="seeList" href="#">Consulter la liste des Resto</a>
-			<div id="geolocation"></div>
 		</div>
-	</body>
+		<div data-role="content">
+			<a data-role="button" class="getPicture" href="#remplirFiche">Prendre en photo un Resto</a>
+			<a data-role="button" id="seeList" href="#">Consulter la liste des Resto</a>
+		</div>
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<div id="remplirFiche" data-role="page">
+		<div data-role="header">
+			<h1>Soumettre Resto</h1>
+		</div>
+		<div data-role="content">
+			<div class="infoPhoto">
+				<div id="photo"></div>
+				<div id="optionPhoto">
+					<input type="button" class="getPicture" value="Changer" />
+					<p id="position"></p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer">
+		</div>
+	</div>
+
+	<!-- //EXEMPLE
+	<div class="" data-role="page">
+		<div data-role="header">
+		</div>
+		<div data-role="content">
+		</div>
+		<div data-role="footer">
+	</div>
+	-->
+</body>
 
 </html>

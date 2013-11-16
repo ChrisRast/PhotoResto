@@ -12,7 +12,7 @@ function getPhoto() {
 }
 
 function onPhotoSuccess(imageData) {
-	$('#geolocation').trigger('foundPhoto', [imageData]);
+	$('#photo').trigger('foundPhoto', [imageData]);
 }
 
 function onPhotoFail(message) {
