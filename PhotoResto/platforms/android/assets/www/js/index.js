@@ -16,8 +16,10 @@ function onDeviceReady() {
 	});
 	$('#photo').on('endPhoto', getPosition);
 	$('.page').on('vclick', '.getPosition', getPosition);
-	$('#remplirFiche .cancel').on('vclick', function(){
+	$('#remplirFiche .cancel').on('vclick', function () {
 		$('#photo').empty();
 		$('#position').empty();
 	})
+
+
 }

@@ -10,7 +10,7 @@ body {
 	-webkit-user-select: none;
 	/*	 prevent copy paste, to allow, change 'none' to 'text' */
 	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-	font-size: 2em;
+	font-size: 12px;
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -29,11 +29,21 @@ body {
 
 .page {
 	height: 100%;
+	font-size:100%;
+}
+[data-role="header"] {
+	height: 10%;
+	width: 100%;
+}
+[data-role="content"] {
+
 }
 [data-role="footer"] {
 	bottom: 0;
 	position: fixed;
-	width: 100%;
+	width: 96%;
+	height: 5%;
+	padding:1% 2%;
 }
 .smallPic {
 	width: 100%;
@@ -60,4 +70,11 @@ body {
 }
 .clear {
 	clear: both;
+}
+.button {
+	height:90%;
+	min-width:20%;
+	max-width:40%;
+	text-align:center;
+	font-size-adjust:auto;
 }
