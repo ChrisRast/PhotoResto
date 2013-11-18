@@ -19,6 +19,7 @@ function onDeviceReady() {
 	$('#remplirFiche .cancel').on('vclick', function () {
 		$('#photo').empty();
 		$('#position').empty();
+		window.history.back();
 	})
 
 
