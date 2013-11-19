@@ -22,6 +22,7 @@ function onDeviceReady() {
 		$('#photo').empty();
 		$('#position').empty();
 		window.history.back();
+        //on a enlevé changer la position (c'est inutile de la modifier)
 	})
 
 
