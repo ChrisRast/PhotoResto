@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+<!-- HOMEPAGE -->
 	<div class="page" id="home" data-role="page">
 		<div data-role="header">
 			<img src="img/logo.png" alt="PhotoResto"/>
@@ -33,30 +33,55 @@
 		<div data-role="footer">
 		</div>
 	</div>
-
-	<div class="page" id="remplirFiche" data-role="page">
-		<div data-role="header">
-			<h1>Soumettre Resto</h1>
+    
+<!-- REMPLIR DONNEES RESTO -->
+    <div class="page" id="remplirFiche" data-role="page">
+        <div data-role="header">
+			<img src="img/logo.png" alt="PhotoResto"/>
+            <h1>PhotoResto</h1>
 		</div>
-		<div data-role="content">
+        <div data-role="content">
 			<div class="infoPhoto">
-				<div id="photo"></div>
-				<div id="optionPhoto">
-					<input type="button" class="getPicture" value="Changer" />
+                <div id="optionPhoto">
+					<input type="button" class="getPicture" value="Reprendre" />
 					<p id="position"></p>
-					<input type="button" class="getPosition" value="Changer" />
 				</div>
-			</div>
-			<div class="infoResto">
-			</div>
-		</div>
-		<div data-role="footer">
-			<a data-role="button" class="left button cancel goHome" href="">Annuler</a>
-			<a data-role="button" class="right button submitResto" href="">Soumettre le Resto</a>
-			<div class="clear"></div>
-		</div>
-	</div>
-
+            </div>
+            <div class="infoResto">
+                <form method="" action="">
+   	                <p><label for="nom">Nom du restaurant</label>
+                        <input type="text" name="nom" id="nom" />
+                    </p>
+                    <p><label for="type">Type de restaurants</label>
+                        <select name="type" id="type">
+                            <option value="fastfood">Fast food</option>
+                            <option value="italien">Italien</option>
+                            <option value="mexicain">Mexicain</option>
+                            <option value="asiatique">Asiatique</option>
+                            <option value="gastronomique">Gastronomique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </p>
+                    <p><label for="note">Note</label>
+                        <select name="note" id="note">
+                            <option value="6">6 - Excellent</option>
+                            <option value="5">5 - Très bon</option>
+                            <option value="4">4 - Bon</option>
+                            <option value="3">3 - Moyen</option>
+                            <option value="2">2 - Déconseillé</option>
+                            <option value="1">1 - A éviter!</option>
+                        </select>
+                    </p>
+                    <p><label for="commentaire">Commentaire</label>
+                        <textarea name="commentaire" id="commentaire" rows="5" cols="20"></textarea>
+                    </p>
+                    <input type="submit" value="OK" />
+                </form>
+             </div>
+        </div>
+        <div data-role="footer">
+	   </div>
+    </div>
 	<!-- //EXEMPLE à utiliser
 	<div class="" data-role="page">
 		<div data-role="header">
