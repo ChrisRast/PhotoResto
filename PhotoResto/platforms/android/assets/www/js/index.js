@@ -16,10 +16,13 @@ function onDeviceReady() {
 	});
 	$('#photo').on('endPhoto', getPosition);
 	$('.page').on('vclick', '.getPosition', getPosition);
+	
+	//Annulation et retour à l'accueil
 	$('#remplirFiche .cancel').on('vclick', function () {
 		$('#photo').empty();
 		$('#position').empty();
 		window.history.back();
+        //on a enlevé changer la position (c'est inutile de la modifier)
 	})
 
 
