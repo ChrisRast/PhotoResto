@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-
+	navigator.splashscreen.hide()
 	$('.page').on('vclick', '.getPicture', getPhoto);
 	$('#photo').on('foundPhoto', function (event, photoB64) {
 		var img = $('<img>');
@@ -16,13 +16,13 @@ function onDeviceReady() {
 	});
 	$('#photo').on('endPhoto', getPosition);
 	$('.page').on('vclick', '.getPosition', getPosition);
-	
+
 	//Annulation et retour à l'accueil
 	$('#remplirFiche .cancel').on('vclick', function () {
 		$('#photo').empty();
 		$('#position').empty();
 		window.history.back();
-        //on a enlevé changer la position (c'est inutile de la modifier)
+		//on a enlevé changer la position (c'est inutile de la modifier)
 	})
 
 
