@@ -14,4 +14,7 @@
 	<preference name="Orientation" value="default" />
 	<preference name="webviewbounce" value="true" />
 	<preference name="KeepRunning" value="true" />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="10000" />
+
 </widget>
