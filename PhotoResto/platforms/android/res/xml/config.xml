@@ -23,4 +23,7 @@
     <preference name="Orientation" value="default" />
     <preference name="webviewbounce" value="true" />
     <preference name="KeepRunning" value="true" />
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
 </widget>
