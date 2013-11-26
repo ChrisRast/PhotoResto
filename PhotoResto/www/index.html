@@ -1,131 +1,169 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-	<!-- DO NOT REMOVE, NEEDED TO RUN -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
-	<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>
-	<script type="text/javascript" src="cordova.js"></script>
-	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
-	<title>PhotoResto!</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/geolocation.js"></script>
-	<script type="text/javascript" src="js/camera.js"></script>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- DO NOT REMOVE, NEEDED TO RUN -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
+        <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
+        <title>PhotoResto</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/geolocation.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+    </head>
 
-<body>
-	<!-- HOMEPAGE -->
-	<div class="page" id="home" data-role="page">
-		<div data-role="header">
-			<img src="img/logo.png" alt="PhotoResto" />
-			<h1>PhotoResto</h1>
-		</div>
-		<div data-role="content">
-			<a data-role="button" class="getPicture" href="#remplirFiche">Prendre en photo un Resto</a>
-			<a data-role="button" id="seeList" href="#">Consulter la liste des Resto</a>
-		</div>
-		<div data-role="footer">
-		</div>
-	</div>
+    <body>
+        <!-- HOMEPAGE -->
+        <div class="page" id="home" data-role="page">
+            <div data-role="header">
+                <img src="img/logo.png" alt="PhotoResto" />
+                <h1>PhotoResto</h1>
+            </div>
+            <div data-role="content">
+                <a data-role="button" class="getPicture" href="#fillSheet">Prendre en photo un Resto</a>
+                <a data-role="button" id="listSheet" href="#listSheet">Consulter la liste des Resto</a>
+            </div>
+            <div data-role="footer"></div>
+        </div>
 
-	<!-- REMPLIR DONNEES RESTO -->
-	<div class="page" id="remplirFiche" data-role="page">
-		<div data-role="header">
-			<img src="img/logo.png" alt="PhotoResto" />
-			<h1>PhotoResto</h1>
-		</div>
-		<div data-role="content">
-			<div class="infoPhoto">
-				<div id="photo"></div>
-				<div id="optionPhoto">
-					<input type="button" class="getPicture" value="Reprendre" />
-				</div>
-			</div>
-			<div class="infoResto">
-				<form method="" action="">
-					<p>
-						<label for="nom">Nom du restaurant</label>
-						<input type="text" name="nom" id="nom" />
-					</p>
-					<p>
-						<label for="type">Type de restaurants</label>
-						<select name="type" id="type">
-							<option value="fastfood">Fast food</option>
-							<option value="italien">Italien</option>
-							<option value="mexicain">Mexicain</option>
-							<option value="asiatique">Asiatique</option>
-							<option value="gastronomique">Gastronomique</option>
-							<option value="autre">Autre</option>
-						</select>
-					</p>
-					<p>
-						<label for="note">Note</label>
-						<select name="note" id="note">
-							<option value="6">6 - Excellent</option>
-							<option value="5">5 - Très bon</option>
-							<option value="4">4 - Bon</option>
-							<option value="3">3 - Moyen</option>
-							<option value="2">2 - Déconseillé</option>
-							<option value="1">1 - A éviter!</option>
-						</select>
-					</p>
-					<p>
-						<label for="commentaire">Commentaire</label>
-						<textarea name="commentaire" id="commentaire" rows="5" cols="20"></textarea>
-					</p>
-					<input type="submit" value="OK" />
-				</form>
-			</div>
-		</div>
-		<div data-role="footer">
-			<a data-role="button" class="left button cancel goHome" href="">Annuler</a>
-			<a data-role="button" class="right button submitResto" href="">Soumettre le Resto</a>
-			<div class="clear"></div>
+        <!-- REMPLIR DONNEES RESTO -->
+        <div class="page" id="fillSheet" data-role="page">
+            <div data-role="header">
+                <img src="img/logo.png" alt="PhotoResto" />
+                <h1>PhotoResto</h1>
+            </div>
+            <div data-role="content">
+                <div class="infoPhoto">
+                    <div id="photo"></div>
+                    <div id="optionPhoto">
+                        <input type="button" class="getPicture" value="Reprendre la photo" />
+                    </div>
+                </div>
+                <div class="infoResto">
+                    <form method="" action="">
+                        <p>
+                            <label for="name">Nom du restaurant</label>
+                            <input type="text" name="name" id="name" />
+                        </p>
+                        <p>
+                            <label for="typeInfo">Type de restaurants</label>
+                            <select name="typeInfo" id="typeInfo">
+                                <option value="fastfood">Fast food</option>
+                                <option value="italien">Italien</option>
+                                <option value="mexicain">Mexicain</option>
+                                <option value="asiatique">Asiatique</option>
+                                <option value="gastronomique">Gastronomique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="mark">Note</label>
+                            <select name="mark" id="mark">
+                                <option value="6">6 - Excellent</option>
+                                <option value="5">5 - Très bon</option>
+                                <option value="4">4 - Bon</option>
+                                <option value="3">3 - Moyen</option>
+                                <option value="2">2 - Déconseillé</option>
+                                <option value="1">1 - A éviter!</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="comment">Commentaire</label>
+                            <textarea name="comment" id="comment" rows="5" cols="20"></textarea>
+                        </p>
+                        <a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
+                        <a data-role="button" class="right button submitResto" href="#sheet">Soumettre le Resto</a>
+                    </form>
+                </div>
+            </div>
+            <div data-role="footer"></div>
+        </div>
+        
+        <!-- LISTE RESTO -->
+        <div class="page" id="listSheet" data-role="page">
+            <div data-role="header">
+                <img src="img/logo.png" alt="PhotoResto" />
+                <h1>PhotoResto</h1>
+            </div>
+            <div data-role="content">
+                <p>
+                    <label for="typeList">Type Restaurant</label>
+                    <select name="typeList" id="typeList">
+                        <option value="fastfood">Fast food</option>
+                        <option value="italien">Italien</option>
+                        <option value="mexicain">Mexicain</option>
+                        <option value="asiatique">Asiatique</option>
+                        <option value="gastronomique">Gastronomique</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="distance">Perimètre recherche</label>
+                    <select name="distance" id="distance">
+                        <option value="< 1km">< 1km</option>
+                        <option value="1km - 5km">1km - 5km</option>
+                        <option value="5km - 10km">5km - 10km</option>
+                        <option value="10km - 20km">10km - 20km</option>
+                        <option value="> 20km">> 20km</option>
+                    </select>
+                </p>
+            </div>
+            <div data-role="footer"></div>
+        </div>
 
-		</div>
-	</div>
-	<!-- FICHE RESTO -->
-	<div class="page" id="fiche" data-role="page">
-		<div data-role="header">
-			<img src="img/logo.png" alt="PhotoResto" />
-			<h1>PhotoResto</h1>
-		</div>
-		<div data-role="content">
-			<h2>Nom du resto</h2>
-			<!-- aller rechercher le nom du resto -->
-			<p>Note du resto</p>
-			<!-- aller rechercher la note du resto -->
-			<a href="">
-				<img src="" alt="" />
-			</a>
-			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
-			<a href="">
-				<img src="" alt="" />
-			</a>
-			<!-- image de la carte + position adresse pour ouvrir google maps -->
-			<p>commentaire</p>
-			<!-- aller rechercher les commentaires s'il y en a -->
-		</div>
-		<div data-role="footer">
-		</div>
-	</div>
-
-
-	<!-- //EXEMPLE à utiliser
-	<div class="" data-role="page">
-		<div data-role="header">
-		</div>
-		<div data-role="content">
-		</div>
-		<div data-role="footer">
-	</div>
-	-->
-</body>
-
+        <!-- FICHE RESTO -->
+        <div class="page" id="sheet" data-role="page">
+            <div data-role="header">
+                <img src="img/logo.png" alt="PhotoResto" />
+                <h1>PhotoResto</h1>
+            </div>
+            <div data-role="content">
+                <h2>Vapiano</h2>
+                <!-- aller rechercher le nom du resto -->
+                <h3>Restaurant italien</h3>
+                <!-- aller rechercher le type du resto -->
+                <p>Excellent ! :)</p>
+                <!-- aller rechercher la note du resto -->
+                <p>
+                    <a href="">
+                        <img src="img/vapiano.jpg" width="440" height="260" alt="nomDuResto" />
+                    </a>
+                </p>
+                <!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+                <p>
+                    <a href="https://maps.google.ch/maps?q=vapiano+lausanne+carte&ie=UTF-8&ei=_nyUUseQH8rOygOU8oKQAg&ved=0CAoQ_AUoAg">
+                        <img src="img/carte_vapiano.jpg" width="440" height="260" alt="nomDuResto" />
+                    </a>
+                </p>
+                <!-- image de la carte + position adresse pour ouvrir google maps -->
+                <p>
+                    Commentaire : blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb 
+                    albal blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb 
+                    albal. blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb 
+                    albal.
+                </p>
+                <!-- aller rechercher les commentaires s'il y en a -->
+            </div>
+            <div data-role="footer"></div>
+        </div>
+        
+        <!-- //EXEMPLE à utiliser
+        <div class="" data-role="page">
+                <div data-role="header">
+                </div>
+                <div data-role="content">
+                </div>
+                <div data-role="footer">
+        </div>
+        -->
+        
+    </body>
+    
 </html>
