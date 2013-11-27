@@ -4,8 +4,6 @@
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
-    <access origin="*" />
-    <preference name="loglevel" value="DEBUG" />
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
@@ -18,12 +16,20 @@
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
+    <name>PhotoResto</name>
+    <description>
+		Locate and rate restaurants with others and add pictures !
+	</description>
     <author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
 		Chris
 	</author>
     <content src="index.html" />
+    <access origin="*" />
+    <preference name="loglevel" value="DEBUG" />
     <preference name="fullscreen" value="false" />
     <preference name="Orientation" value="default" />
     <preference name="webviewbounce" value="true" />
     <preference name="KeepRunning" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="10000" />
 </widget>
