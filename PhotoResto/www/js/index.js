@@ -18,11 +18,12 @@ function onDeviceReady() {
 	$('.page').on('vclick', '.getPosition', getPosition);
 
 	//Annulation et retour à l'accueil
-	$('#remplirFiche .cancel').on('vclick', function () {
-		$('#photo').empty();
-		$('#position').empty();
+	$('.goHome').on('vclick', function () {
+		$('.photo, textarea, input[type="text"], #map').each(function () {
+			$(this).val('');
+			$(this).empty();
+		})
 		window.history.back();
-		//on a enlevé changer la position (c'est inutile de la modifier)
 	})
 
 

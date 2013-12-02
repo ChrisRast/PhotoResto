@@ -10,7 +10,7 @@ body {
 	-webkit-user-select: none;
 	/*	 prevent copy paste, to allow, change 'none' to 'text' */
 	font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
@@ -18,14 +18,19 @@ body {
 	color: #000;
 }
 /* Portrait layout (default) */
-
-/* Landscape layout (with min-width) */
-
-/*
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-
+@media screen and (min-aspect-ratio: 1/1) and (min-width:600px) {
+	body {
+		font-size:24px;
+	}
 }
-*/
+
+
+@media screen and (min-aspect-ratio: 1/1) and (max-width:400px) {
+	body {
+		font-size: 12px;
+	}
+}
+
 
 .page {
 	height: 100%;
@@ -60,11 +65,11 @@ body {
 }
 .smallPic {
 	width: 100%;
+	
 }
 .infoPhoto {
 	height: 30%;
 	width: 100%;
-	padding: 1%;
 }
 #photo {
 	max-width: 49%;
@@ -90,4 +95,7 @@ body {
 	max-width:40%;
 	text-align:center;
 	font-size-adjust:auto;
+}
+.infoResto {
+	clear:both;
 }
