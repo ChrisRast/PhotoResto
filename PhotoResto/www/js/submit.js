@@ -18,38 +18,36 @@ function createNodeResto(restoName, restoType) {
 			xhr.setRequestHeader("Authorization", "Basic " + btoa("admin:admin"));
 		}
 	});
-	request.done(createNodes(restoName));
+	request.done(createNodePhoto(restoName));
 	request.fail(alert('CreateNodeResto FAIL!'))
 }
 
-function createNodes(restoName) {
-	var photoB64 = $('#photo img').data('photoB64');
-	var restoGrade = $('#mark option:selected').val();
-	var restoComment = $('#comment').text();
-	var nodeName = restoName;
-	createNodePhoto(photoB64, nodeName)
-}
 
 //FUCK
 function createNodePhoto(photoB64, nodeName) {
-	var request = $.ajax(localhost + '/'+, {
+	var photoB64 = $('#photo img').data('photoB64');
+	var request = $.ajax(localhost + '/images/' + nodeName, {
 		type: 'POST',
 		data: {
 			'created': none,
-						 'photoB64'
+			':base64': photoB64,
+			'title': nodeName,
+			'restoName': nodeName
 		},
 		beforeSend: function (xhr) {
 			xhr.setRequestHeader("Authorization", "Basic " + btoa("admin:admin"));
 		}
 	});
-	request.done(createNodes);
+	request.done(createNodeGrade);
 	request.fail(alert('CreateNodeResto FAIL!'))
 }
 
 function createNodeGrade() {
-
+	var restoGrade = $('#mark option:selected').val();
+	//TODO
 }
 
 function createNodeComment() {
-
+	var restoComment = $('#comment').text();
+	//TODO
 }
