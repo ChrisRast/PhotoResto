@@ -5,7 +5,9 @@ function onDeviceReady() {
 	$('.page').on('vclick', '.getPicture', getPhoto);
 	$('#photo').on('foundPhoto', function (event, photoB64) {
 		var img = $('<img>');
-		img.attr('src', 'data:image/jpeg;base64,' + photoB64).addClass('smallPic');
+		img.attr('src', 'data:image/jpeg;base64,' + photoB64)
+			.addClass('smallPic')
+			.data('photoB64', photoB64);
 		$(this).empty().append(img).trigger('endPhoto');
 	})
 	$('#photo').on('foundPosition', function (event, coordPosition) {
@@ -25,6 +27,5 @@ function onDeviceReady() {
 		})
 		window.history.back();
 	})
-
 
 }

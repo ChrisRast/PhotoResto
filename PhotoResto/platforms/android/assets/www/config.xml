@@ -1,20 +1,35 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <widget id="ch.comem.photoresto" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-	<name>PhotoResto</name>
-	<description>
-		Locate and rate restaurants with others and add pictures !
-	</description>
-	<author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
-		Chris
-	</author>
-	<content src="index.html" />
-	<access origin="*" />
-	<preference name="loglevel" value="DEBUG" />
-	<preference name="fullscreen" value="false" />
-	<preference name="Orientation" value="default" />
-	<preference name="webviewbounce" value="true" />
-	<preference name="KeepRunning" value="true" />
-	<preference name="SplashScreen" value="screen" />
-	<preference name="SplashScreenDelay" value="10000" />
+    <name>PhotoResto</name>
+    <description>
+        Locate and rate restaurants with others and add pictures !
+    </description>
+    <author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
+        Chris
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="fullscreen" value="false" />
+    <preference name="Orientation" value="default" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="10000" />
+        
+<!--
+    <icon gap:platform="blackberry" src="res\icons\android\icon-72-hdpi.png" />
+    <icon gap:platform="blackberry" gap:state="hover" src="res\icons\android\icon-72-hdpi.png" />
+    <icon gap:platform="android" height="36" src="res\icons\android\icon-36-ldpi.png" width="36" />
+    <icon gap:platform="android" height="48" src="res\icons\android\icon-48-mdpi.png" width="48" />
+    <icon gap:platform="android" height="72" src="res\icons\android\icon-72-hdpi.png" width="72" />
+    <icon gap:platform="android" height="96" src="res\icons\android\icon-96-xhdpi.png" width="96" />
+    <icon gap:platform="ios" height="36" src="res\icons\android\icon-36-ldpi.png" width="36" />
+    <icon gap:platform="ios" height="48" src="res\icons\android\icon-48-mdpi.png" width="48" />
+    <icon gap:platform="ios" height="72" src="res\icons\android\icon-72-hdpi.png" width="72" />
+    <icon gap:platform="ios" height="96" src="res\icons\android\icon-96-xhdpi.png" width="96" />
+    <icon gap:platform="webos" src="res\icons\android\icon-72-hdpi.png" />
+    <icon gap:platform="winphone" src="res\icons\android\icon-48-mdpi.png" />
+-->
 
 </widget>

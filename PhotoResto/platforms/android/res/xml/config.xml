@@ -18,11 +18,11 @@
     </feature>
     <name>PhotoResto</name>
     <description>
-		Locate and rate restaurants with others and add pictures !
-	</description>
+        Locate and rate restaurants with others and add pictures !
+    </description>
     <author email="christophe.rast@heig-vd.ch" href="http://imchris.ch">
-		Chris
-	</author>
+        Chris
+    </author>
     <content src="index.html" />
     <access origin="*" />
     <preference name="loglevel" value="DEBUG" />
