@@ -15,7 +15,7 @@
 	<script type="text/javascript" src="cordova.js"></script>
 	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
 	<title>PhotoResto</title>
-    <link rel="stylesheet" href="css/themes/PhotoResto_2.min.css" />
+    <link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -28,8 +28,8 @@
 	<!-- HOMEPAGE -->
 	<div class="page" id="home" data-role="page">
 		<div data-role="header">
-			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-                        <h1 class="title">PHOTORESTO</h1>
+			<img src="img/logo4.png"  class="logo" alt="PhotoResto" />
+                        
 		</div>
 		<div data-role="content">
 			<a data-role="button" class="getPicture" href="#fillSheet">Prendre en photo un Resto</a>
@@ -40,9 +40,9 @@
 
 	<!-- REMPLIR DONNEES RESTO -->
 	<div class="page" id="fillSheet" data-role="page">
-		<div data-role="header">
+		<div data-role="header"  >
 			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-                        <h1>PHOTORESTO</h1>
+                    
 		</div>
 		<div data-role="content">
 			<div class="infoPhoto">
@@ -84,7 +84,7 @@
 						<textarea name="comment" id="comment" rows="5" cols="20"></textarea>
 					</p>
 					<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-					<a data-role="button" class="right button submitResto" href="#sheet">Rechercher les Restos</a>
+					<a data-role="button" class="right button submitResto" href="#sheet">Soumettre</a>
 				</form>
 			</div>
 		</div>
@@ -119,7 +119,7 @@
 				</select>
 			</p>
 			<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-			<a data-role="button" class="right button submitSearch" href="#">Soumettre le Resto</a>
+			<a data-role="button" class="right button submitSearch" href="#">Rechercher</a>
 		</div>
 	</div>
 
