@@ -4,6 +4,8 @@ $('#photo').on('foundPosition', function (event, coordPosition) {
     var lng = coordPosition["long"];
     
     // met les données lat et lng dans des div class=lat & class=lng -> div à créer dans html
+    var div = $("<div/>");
+    div.appendTo("#map");
     div.data("lat", lat);
     div.data("long", lng);
     console.log("div remplis");
