@@ -17,7 +17,7 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
         
-<!--
+<!-- PLante la build de l'application, faut trouver autre chose ! :p
     <icon gap:platform="blackberry" src="res\icons\android\icon-72-hdpi.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="res\icons\android\icon-72-hdpi.png" />
     <icon gap:platform="android" height="36" src="res\icons\android\icon-36-ldpi.png" width="36" />
