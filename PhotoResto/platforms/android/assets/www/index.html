@@ -5,14 +5,19 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />	
 	<!-- DO NOT REMOVE, NEEDED TO RUN -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
-	<script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+	<!-- fichiers chris
+    <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>
 	<script type="text/javascript" src="cordova.js"></script>
 	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
 	<title>PhotoResto</title>
+    <link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/geolocation.js"></script>
@@ -23,8 +28,8 @@
 	<!-- HOMEPAGE -->
 	<div class="page" id="home" data-role="page">
 		<div data-role="header">
-			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-                        <h1 class="title">PHOTORESTO</h1>
+			<img src="img/logo4.png"  class="logo" alt="PhotoResto" />
+                        
 		</div>
 		<div data-role="content">
 			<a data-role="button" class="getPicture" href="#fillSheet">Prendre en photo un Resto</a>
@@ -35,9 +40,9 @@
 
 	<!-- REMPLIR DONNEES RESTO -->
 	<div class="page" id="fillSheet" data-role="page">
-		<div data-role="header">
+		<div data-role="header"  >
 			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-                        <h1>PHOTORESTO</h1>
+                    
 		</div>
 		<div data-role="content">
 			<div class="infoPhoto">
@@ -79,7 +84,7 @@
 						<textarea name="comment" id="comment" rows="5" cols="20"></textarea>
 					</p>
 					<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-					<a data-role="button" class="right button submitResto" href="#sheet">Rechercher les Restos</a>
+					<a data-role="button" class="right button submitResto" href="#sheet">Soumettre</a>
 				</form>
 			</div>
 		</div>
@@ -114,7 +119,7 @@
 				</select>
 			</p>
 			<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-			<a data-role="button" class="right button submitSearch" href="#">Soumettre le Resto</a>
+			<a data-role="button" class="right button submitSearch" href="#">Rechercher</a>
 		</div>
 	</div>
 
