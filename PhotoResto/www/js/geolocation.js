@@ -13,7 +13,7 @@ function getPosition() {
 //
 //Récupère seulement latitude et longitude
 function onPositionSuccess(position) {
-var coordPosition = new Array();
+	var coordPosition = new Array();
 	coordPosition["lat"] = position.coords.latitude;
 	coordPosition["long"] = position.coords.longitude;
 	// passe la position dans l'event afin qu'elle soit récupérée ailleurs
