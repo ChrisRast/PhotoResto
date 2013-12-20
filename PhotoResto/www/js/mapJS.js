@@ -5,9 +5,9 @@ $('#photo').on('foundPosition', function (event, coordPosition) {
     
     // met les données lat et lng dans des div class=lat & class=lng -> div à créer dans html
     var div = $("<div/>");
-    div.appendTo("#map");
     div.data("lat", lat);
     div.data("long", lng);
+    div.appendTo("#map");
     console.log("div remplis");
 		            
     //Trigger la fin du processus de geolocalisation
