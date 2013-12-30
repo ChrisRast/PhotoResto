@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 //Dès que 
 function onDeviceReady() {
-	//navigator.splashscreen.hide() Not Working
+	navigator.splashscreen.hide();
 	
 	$('.page').on('vclick', '.getPicture', getPhoto);
 	//Attache l'image reçue en base64, l'affiche en image normale et la stocke dans le html
