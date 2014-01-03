@@ -1,11 +1,11 @@
 <html>
     <head>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>    
     
         <script language="javascript">
 
             function createContent() {
-                $.ajax("/content/ajax/create/*", {
+                $.ajax("http://THJSTR:8080/content/ajax/create/*", {
                     type: "POST",
                     data: {
                         "created": null,
@@ -25,7 +25,7 @@
             }
             
             function listContent() {
-                $.ajax("/content/ajax/create.1.json", {
+                $.ajax("http://THJSTR:8080/content/ajax/create.1.json", {
                     type: "GET",
                     complete: function(xhr) {
                         var list = $("#list");

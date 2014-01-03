@@ -4,7 +4,7 @@ function createNodeResto() {
 	var restoName = $('#name').val();
 	var restoType = $('#typeInfo option:selected').val();
 	var restoGrade = $('#mark option:selected').val();
-	alert(restoName +'-'+ restoType +'-'+ restoGrade)
+	alert(restoName + '-' + restoType + '-' + restoGrade)
 	var request = $.ajax(localhost + '/*', {
 		type: 'POST',
 		data: {
@@ -21,7 +21,7 @@ function createNodeResto() {
 		//createNodePhoto(restoName)
 		alert('CreateNodeResto Success!')
 	);
-	request.fail(alert('CreateNodeResto FAIL!'))
+	request.fail(alert('CreateNodeResto FAIL!'));
 }
 
 

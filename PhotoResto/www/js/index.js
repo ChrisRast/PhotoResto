@@ -37,9 +37,10 @@ function onDeviceReady() {
 	$('.submitResto').on('vclick', function () {
 		if ($('#name').val() == '') {
 			alert('Veuillez remplir le nom du resto !');
-		} else if ($('#photo').text() == '') {
+		} else if ($('#photo').contents() == '') {
 			alert('Veuillez soumettre une photo!')
 		} else {
+			alert('Ok!');
 			createNodeResto;
 		}
 		event.preventDefault();

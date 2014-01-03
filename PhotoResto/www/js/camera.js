@@ -5,9 +5,9 @@ function getPhoto() {
 		quality: 80,
 		destinationType: Camera.DestinationType.DATA_URL,
 		sourceType: Camera.PictureSourceType.CAMERA,
-		saveToPhotoAlbum: true,
 		correctOrientation: false,
-		encodingType: Camera.EncodingType.JPEG
+		encodingType: Camera.EncodingType.JPEG,
+		saveToPhotoAlbum: true
 	};
 	//Exec
 	navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, options);
