@@ -5,34 +5,35 @@
 	<meta charset="utf-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />	
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 	<!-- DO NOT REMOVE, NEEDED TO RUN -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
 	<!-- fichiers chris
     <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>-->
 	<script type="text/javascript" src="cordova.js"></script>
 	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
 	<title>PhotoResto</title>
-    <link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
-    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+	<link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/geolocation.js"></script>
 	<script type="text/javascript" src="js/camera.js"></script>
+	<script type="text/javascript" src="js/submit.js"></script>
 </head>
 
 <body>
 	<!-- HOMEPAGE -->
 	<div class="page" id="home" data-role="page">
 		<div data-role="header">
-			<img src="img/logo4.png"  class="logo" alt="PhotoResto" />
-                        
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+
 		</div>
 		<div data-role="content">
-			<a data-role="button" class="getPicture" href="#fillSheet">Prendre en photo un Resto</a>
+			<a data-role="button" class="getPicture" href="">Prendre en photo un Resto</a>
 			<a data-role="button" href="#listSheet">Consulter la liste des Resto</a>
 			<a data-role="button" href="#sheet">Exemple fiche</a>
 		</div>
@@ -40,9 +41,9 @@
 
 	<!-- REMPLIR DONNEES RESTO -->
 	<div class="page" id="fillSheet" data-role="page">
-		<div data-role="header"  >
+		<div data-role="header">
 			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-                    
+
 		</div>
 		<div data-role="content">
 			<div class="infoPhoto">
@@ -110,12 +111,11 @@
 			<p>
 				<label for="distance">Perimètre recherche</label>
 				<select name="distance" id="distance">
-					<option value="< 1km">
-						< 1km</option>
-							<option value="1km - 5km">1km - 5km</option>
-							<option value="5km - 10km">5km - 10km</option>
-							<option value="10km - 20km">10km - 20km</option>
-							<option value="> 20km">> 20km</option>
+					<option value="-1km">Moins de 1km</option>
+					<option value="+1km">1km à 5km</option>
+					<option value="+5km">5km à 10km</option>
+					<option value="+10km">10km à 20km</option>
+					<option value=">+20km">Plus de 20km</option>
 				</select>
 			</p>
 			<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
@@ -129,30 +129,29 @@
 			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
 		</div>
 		<div data-role="content">
-			<h2>Vapiano</h2>
+			<h2 id="restoName"></h2>
 			<!-- aller rechercher le nom du resto -->
-			<h3>Restaurant italien</h3>
+			<h3 id="restoType">Restaurant italien</h3>
 			<!-- aller rechercher le type du resto -->
-			<p>Excellent ! :)</p>
+			<p id="restoGrade">Excellent ! :)</p>
 			<!-- aller rechercher la note du resto -->
-			<p>
+			<p id="restoPhoto">
 				<a href="">
 					<img src="img/vapiano.jpg" width="440" height="260" alt="nomDuResto" />
 				</a>
 			</p>
 			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
-			<p>
+			<p id="restoLoc">
 				<a href="https://maps.google.ch/maps?q=vapiano+lausanne+carte&ie=UTF-8&ei=_nyUUseQH8rOygOU8oKQAg&ved=0CAoQ_AUoAg">
 					<img src="img/carte_vapiano.jpg" width="440" height="260" alt="nomDuResto" />
 				</a>
 			</p>
 			<!-- image de la carte + position adresse pour ouvrir google maps -->
-			<p>
-				Commentaire : blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb albal blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb albal. blablabla balbalbab lbalbalb alba ba blabla balbb alb a lb albal.
+			<p id="restoComment">
 			</p>
 			<!-- aller rechercher les commentaires s'il y en a -->
-            <!--décider nos boutons-->
-            <a data-role="button" class="left button goHome" href="#home">retour</a>
+			<!--décider nos boutons-->
+			<a data-role="button" class="left button goHome" href="#home">retour</a>
 		</div>
 	</div>
 

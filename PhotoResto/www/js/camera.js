@@ -2,7 +2,7 @@
 function getPhoto() {
 	//Param
 	var options = {
-		quality: 100,
+		quality: 80,
 		destinationType: Camera.DestinationType.DATA_URL,
 		sourceType: Camera.PictureSourceType.CAMERA,
 		saveToPhotoAlbum: true,
