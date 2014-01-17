@@ -83,9 +83,6 @@ label.ui-btn {
 .ui-btn-active {
 	cursor: pointer;
 }
-.retour {
-width:20%;
-float:top;}
 /* Corner rounding
 -----------------------------------------------------------------------------------------------------------*/
 /* Class ui-btn-corner-all deprecated in 1.4 */
