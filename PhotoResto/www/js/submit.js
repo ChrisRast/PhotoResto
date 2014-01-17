@@ -1,11 +1,10 @@
-var localhost = 'THJSTR:8080/content/resto';
-
 function createNodeResto() {
+	var localhost = 'http://thjstr:8080/content/resto';
 	var restoName = $('#name').val();
 	var restoType = $('#typeInfo option:selected').val();
 	var restoGrade = $('#mark option:selected').val();
 	alert(restoName + '-' + restoType + '-' + restoGrade)
-	var request = $.ajax(localhost + '/*', {
+	$.ajax(localhost + '/*', {
 		type: 'POST',
 		data: {
 			'created': none,
@@ -16,17 +15,23 @@ function createNodeResto() {
 		beforeSend: function (xhr) {
 			xhr.setRequestHeader("Authorization", "Basic " + btoa("admin:admin"));
 		}
-	});
-	request.done(
-		//createNodePhoto(restoName)
-		alert('CreateNodeResto Success!')
+	}).done(
+		function () {
+			//createNodePhoto(restoName); 
+			alert('CreateNodeResto Success!');
+			$.mobile.navigate('#sheet');
+		}
+	).fail(
+		function () {
+			alert('CreateNodeResto FAIL!')
+		}
 	);
-	request.fail(alert('CreateNodeResto FAIL!'));
 }
 
 
 //FUCK
 function createNodePhoto(nodeName) {
+	var localhost = 'http://thjstr:8080/content/resto';
 	var photoB64 = $('#photo img').data('photoB64');
 	var request = $.ajax(localhost + '/images/' + nodeName, {
 		type: 'POST',
