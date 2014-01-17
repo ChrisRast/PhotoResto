@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<!-- DO NOT REMOVE, NEEDED TO RUN -->
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+	<!-- fichiers chris
+    <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>-->
+	<script type="text/javascript" src="cordova.js"></script>
+	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
+	<title>PhotoResto</title>
+	<link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/geolocation.js"></script>
+	<script type="text/javascript" src="js/camera.js"></script>
+	<script type="text/javascript" src="js/submit.js"></script>
+</head>
+
+<body>
+<!-- restaurant1 -->
+	<div class="page" id="resto1" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">La Grange</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">Restaurant italien</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">3 - Moyen</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/lagrange.jpg" width="500" height="375" alt="la grange" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				<a href="https://maps.google.ch/maps?q=La+Grange+restaurant+Yverdon-les-Bains&hl=fr&ll=46.779344,6.642222&spn=0.022189,0.058579&sll=46.743625,6.317139&sspn=1.532009,5.388794&hq=La+Grange+restaurant&hnear=Yverdon-les-Bains,+Jura-Nord+vaudois,+Vaud&cid=3616740834970015401&t=m&z=15">
+					<iframe width="500" height="425" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ch/maps?f=q&amp;source=embed&amp;hl=fr&amp;geocode=&amp;q=La+Grange+restaurant+Yverdon-les-Bains&amp;sll=46.743625,6.317139&amp;sspn=1.532009,5.388794&amp;ie=UTF8&amp;hq=La+Grange+restaurant&amp;hnear=Yverdon-les-Bains,+Jura-Nord+vaudois,+Vaud&amp;cid=3616740834970015401&amp;ll=46.779105,6.64226&amp;spn=0.020396,0.036478&amp;t=m&amp;output=embed"></iframe>
+				</a>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">
+                Cadre magnifique et très convivial. Spécialement en été sur la terrasse. La Grange est définitivement un restaurant italien incontournable dans la région d'Yverdon
+			</p>
+			<!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+<!-- restaurant2 -->
+	<div class="page" id="resto2" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">Le Ranch</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">Gastronomique</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">5 - Très bon</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/leranch.jpg" width="500" alt="le ranch" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				
+					<iframe width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=le+ranch+restaurant,+yverdon&amp;aq=&amp;sll=46.779638,6.642163&amp;sspn=0.002524,0.006539&amp;t=h&amp;ie=UTF8&amp;hq=le+ranch+restaurant,&amp;hnear=Yverdon-les-Bains,+Vaud,+Suisse&amp;ll=46.785809,6.646405&amp;spn=0.016701,0.010813&amp;output=embed"></iframe>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">
+                Pâtes aux crevettes assez quelconques, filets de perches normaux. La viande est par contre très bonne et la cuisson est respectée et impeccable. Prix corrects.
+			</p>
+			<!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+<!-- restaurant3 -->
+	<div class="page" id="resto3" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">Hotel de Ville Yvonand</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">Gastronomique</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">5 - Très bon</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/yvonand.jpg" width="500" height="375" alt="hotel de ville Yvonand" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				
+					<iframe width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Caf%C3%A9-Restaurant+H%C3%B4tel+De+Ville,+Yvonand,+Suisse&amp;aq=0&amp;oq=yvonand+hotel+de+ville&amp;sll=46.785809,6.646405&amp;sspn=0.020188,0.052314&amp;t=m&amp;ie=UTF8&amp;hq=Caf%C3%A9-Restaurant+H%C3%B4tel+De+Ville,&amp;hnear=Yvonand,+Vaud,+Suisse&amp;ll=46.799619,6.745736&amp;spn=0.006295,0.006295&amp;output=embed"></iframe>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">
+            Très bien servi</p>
+            <p class="restoComment">
+            Inovateur</p>
+			<!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+<!-- restaurant4 -->
+	<div class="page" id="resto4" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">Double R</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">Fast Food</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">6 - Excellent</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/doubleR.jpg" width="500" alt="Double R" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				
+					<iframe width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Double+R+yverdon&amp;aq=&amp;sll=46.799619,6.745736&amp;sspn=0.010091,0.026157&amp;ie=UTF8&amp;hq=Double+R&amp;hnear=Yverdon-les-Bains,+Vaud,+Suisse&amp;t=m&amp;ll=46.779137,6.639619&amp;spn=0.006295,0.006295&amp;output=embed"></iframe>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">
+            Des supers bon Burgers!</p>
+            <p class="restoComment">
+            Le Sergent Jack Pepper est excellent, je vous le recommande</p>
+            <p class="restoComment">
+            Bon, original, bonne ambiance.</p>
+                
+                <!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+<!-- restaurant5 -->
+	<div class="page" id="resto5" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">Don Camillo</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">italien</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">4 - Bon</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/donCamillo.jpg" width="500" alt="Don Camillo" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				<iframe width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=Don+Camillo,+Rue+du+Pr%C3%A9,+Yverdon-les-Bains,+Suisse&amp;aq=0&amp;oq=don+camillo&amp;sll=46.779137,6.639619&amp;sspn=0.010095,0.026157&amp;ie=UTF8&amp;hq=Don+Camillo,&amp;hnear=Rue+du+Pr%C3%A9,+1400+Yverdon-les-Bains,+Vaud,+Suisse&amp;ll=46.779139,6.639626&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed"></iframe>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">Une bonne revisite pour notre soirée spéciale pour le garçon. Les pizza sont magnifiques, le bienvenue chaleureux comme le feu de bois et la tiramisu était une merveille</p>
+                        
+                <!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+<!-- restaurant6 -->
+	<div class="page" id="resto6" data-role="page">
+		<div data-role="header">
+			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
+            <a href="index.html" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+		</div>
+		<div data-role="content">
+			<h2 id="restoName" class="titreResto">Chez Peppone</h2>
+			<!-- aller rechercher le nom du resto -->
+			<h3 id="restoType">italien</h3>
+			<!-- aller rechercher le type du resto -->
+            <h2 class="titreResto">Note:</h2>
+			<p id="restoGrade">3 - Moyen</p>
+			<!-- aller rechercher la note du resto -->
+			<p id="restoPhoto">
+				
+					<img src="img/chezpeppone.jpg" width="500" alt="chezpeppone" />
+				
+			</p>
+			<!-- aller rechercher l'image du resto + créer un lien pour la galerie de toutes les photos du resto -->
+			<p id="restoLoc">
+				<iframe width="500" height="375" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=chez+peppone,+yverdon&amp;aq=&amp;sll=46.779447,6.63851&amp;sspn=0.010095,0.026157&amp;ie=UTF8&amp;hq=chez+peppone,&amp;hnear=Yverdon-les-Bains,+Vaud,+Suisse&amp;t=m&amp;ll=46.785501,6.632649&amp;spn=0.016024,0.01945&amp;output=embed"></iframe>
+			</p>        
+			<!-- image de la carte + position adresse pour ouvrir google maps -->
+			<h2 class="titreResto">Commentaires:</h2>
+            <p class="restoComment">Les pizzas sont très bonnes, l'ambiance et le service sympathique.</p>
+            <p class="restoComment">Excellent resto, mais prevoir une couverture si vous mangez pres d'une fenetre. Mal isole! A eviter en hiver</p>
+                        
+                <!-- aller rechercher les commentaires s'il y en a -->			
+		</div>
+	</div>
+    
+
+    
+    
+    
+    
+</body>
+
+</html>
