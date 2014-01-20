@@ -15,8 +15,8 @@ function searchResto() {
 			// parcourir les restaurants 
 			$('.resto', html).each(function (i, e) {
 				//récupère le typeResto de restaurant étant parcouru
-				var typeResto = $('.restoType', e).data();
-				var distanceResto = $('.restoDistance', e).data();
+				var typeResto = e.find('.restoType').data();
+				var distanceResto = e.find('.restoDistance').data();
 				alert(typeResto + ' & ' + distanceResto)
 			});
 		});
