@@ -2,11 +2,12 @@ function createNodeResto() {
 	var localhost = 'http://thjstr:8080/content/resto';
 	var restoName = $('#name').val();
 	var restoType = $('#typeInfo option:selected').val();
+	/*------- Code pour simuler un fonctionnement normal ------*/
 	var restoGrade = $('#mark option:selected').val();
 	var photoB64 = $('#photo img').data('photoB64');
 	var restoComment = $('#comment').text();
 	$('#photo').on('foundPosition', function (event, coordPosition) {
-		var url = "http://maps.google.com/maps?q=" + coordPosition["lat"] + "," + coordPosition["long"]
+		var url = "http://maps.googleapis.com/maps/api/staticmap?center=" + coordPosition["lat"] + "," + coordPosition["long"] +"&size=700x425&markers=color:orange%7Clabel:"+restoName+"%7C"+ coordPosition["lat"] + "," + coordPosition["long"]
 		$('#restoLoc').children($('a')).attr('href', url).children('iframe').attr('src', url);
 	})
 	$('#restoName').empty().append(restoName)
@@ -16,9 +17,9 @@ function createNodeResto() {
 		.attr('src', 'data:image/jpeg;base64,' + photoB64)
 		.attr('alt', restoName);
 	$('#restoComment').empty().append(restoComment);
-
-
 	$.mobile.navigate('#sheet');
+	
+	/*---- code normal ----*/
 	/*alert(restoName + '-' + restoType + '-' + restoGrade)
 	$.ajax(localhost + '/*', {
 		type: 'POST',
