@@ -3,7 +3,23 @@ function createNodeResto() {
 	var restoName = $('#name').val();
 	var restoType = $('#typeInfo option:selected').val();
 	var restoGrade = $('#mark option:selected').val();
-	alert(restoName + '-' + restoType + '-' + restoGrade)
+	var photoB64 = $('#photo img').data('photoB64');
+	var restoComment = $('#comment').text();
+	$('#photo').on('foundPosition', function (event, coordPosition) {
+		var url = "http://maps.google.com/maps?q=" + coordPosition["lat"] + "," + coordPosition["long"]
+		$('#restoLoc').children($('a')).attr('href', url).children('iframe').attr('src', url);
+	})
+	$('#restoName').empty().append(restoName)
+	$('#restoType').empty().append(restoType)
+	$('#restoGrade').empty().append(restoGrade)
+	$('#restoPhoto').empty().children($('img'))
+		.attr('src', 'data:image/jpeg;base64,' + photoB64)
+		.attr('alt', restoName);
+	$('#restoComment').empty().append(restoComment);
+
+
+	$.mobile.navigate('#sheet');
+	/*alert(restoName + '-' + restoType + '-' + restoGrade)
 	$.ajax(localhost + '/*', {
 		type: 'POST',
 		data: {
@@ -25,7 +41,7 @@ function createNodeResto() {
 		function () {
 			alert('CreateNodeResto FAIL!')
 		}
-	);
+	);*/
 }
 
 
