@@ -43,4 +43,5 @@ function onDeviceReady() {
 			createNodeResto();
 		}
 	});
+	$('.submitSearch').on('vclick', searchResto)
 }

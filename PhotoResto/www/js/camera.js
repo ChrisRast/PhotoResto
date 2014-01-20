@@ -19,5 +19,4 @@ function onPhotoSuccess(imageData) {
 }
 //Message d'erreur
 function onPhotoFail(message) {
-	alert('Failed because: ' + message);
 }

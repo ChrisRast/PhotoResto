@@ -29,7 +29,7 @@ function createNodeResto() {
 }
 
 
-//FUCK
+
 function createNodePhoto(nodeName) {
 	var localhost = 'http://thjstr:8080/content/resto';
 	var photoB64 = $('#photo img').data('photoB64');

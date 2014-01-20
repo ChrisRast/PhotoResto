@@ -7,17 +7,15 @@
 	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 	<!-- DO NOT REMOVE, NEEDED TO RUN -->
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
-	<!-- fichiers chris
-    <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/jquery/jquery.mobile-1.3.2.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.mobile-1.4.0.js"></script>
+
 	<script type="text/javascript" src="cordova.js"></script>
 	<!-- CAN BE MODIFIED OR REMOVED FOR PROJECT -->
 	<title>PhotoResto</title>
 	<link rel="stylesheet" href="css/themes/PhotoResto_2.css" />
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.0.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/geolocation.js"></script>
@@ -37,8 +35,7 @@
 		<div data-role="content">
 			<a data-role="button" class="getPicture" href="">Prendre en photo un Resto</a>
 			<a data-role="button" href="#listSheet">Consulter la liste des Resto</a>
-			<a data-role="button" href="#sheet">Exemple fiche</a>
-			<a data-role="button" href="ajax.html">ajax.html</a>
+			<a data-role="button" href="restaurants.html">Liste restaurants</a>
 		</div>
 	</div>
 
@@ -64,6 +61,7 @@
 					<p>
 						<label for="typeInfo">Type de restaurants</label>
 						<select name="typeInfo" id="typeInfo">
+							<option value="" selected>Choisissez un type</option>
 							<option value="fastfood">Fast food</option>
 							<option value="italien">Italien</option>
 							<option value="mexicain">Mexicain</option>
@@ -75,6 +73,7 @@
 					<p>
 						<label for="mark">Note</label>
 						<select name="mark" id="mark">
+							<option value="" selected>Choisissez une note</option>
 							<option value="6">6 - Excellent</option>
 							<option value="5">5 - Très bon</option>
 							<option value="4">4 - Bon</option>
@@ -103,6 +102,7 @@
 			<p>
 				<label for="typeList">Type Restaurant</label>
 				<select name="typeList" id="typeList">
+					<option value="" selected>Choisissez un type</option>
 					<option value="fastfood">Fast food</option>
 					<option value="italien">Italien</option>
 					<option value="mexicain">Mexicain</option>
@@ -114,15 +114,16 @@
 			<p>
 				<label for="distance">Perimètre recherche</label>
 				<select name="distance" id="distance">
-					<option value="-1km">Moins de 1km</option>
-					<option value="+1km">1km à 5km</option>
-					<option value="+5km">5km à 10km</option>
-					<option value="+10km">10km à 20km</option>
-					<option value=">+20km">Plus de 20km</option>
+					<option value="" selected>Choisissez une distance</option>
+					<option value="1">Moins de 1km</option>
+					<option value="2">1km à 5km</option>
+					<option value="3">5km à 10km</option>
+					<option value="4">10km à 20km</option>
+					<option value="5">Plus de 20km</option>
 				</select>
 			</p>
 			<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-			<a data-role="button" class="right button submitSearch" href="#">Rechercher</a>
+			<a data-role="button" class="right button submitSearch" href="">Rechercher</a>
 		</div>
 	</div>
 

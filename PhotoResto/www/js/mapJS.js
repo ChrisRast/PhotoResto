@@ -1,3 +1,5 @@
+//Ce fichier n'est pas utilisé dans l'application
+
 // localisation
 $('#photo').on('foundPosition', function (event, coordPosition) {
     var lat = coordPosition["lat"];
