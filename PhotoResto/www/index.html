@@ -23,6 +23,8 @@
 	<script type="text/javascript" src="js/geolocation.js"></script>
 	<script type="text/javascript" src="js/camera.js"></script>
 	<script type="text/javascript" src="js/submit.js"></script>
+	<script type="text/javascript" src="js/restaurant.js"></script>
+
 </head>
 
 <body>
@@ -86,7 +88,7 @@
 						<textarea name="comment" id="comment" rows="5" cols="20"></textarea>
 					</p>
 					<a data-role="button" class="left button cancel goHome" href="#home">Annuler</a>
-					<a data-role="button" class="right button submitResto" href="#sheet">Soumettre</a>
+					<a data-role="button" class="right button submitResto" href="">Soumettre</a>
 				</form>
 			</div>
 		</div>
@@ -128,8 +130,8 @@
 	<div class="page" id="sheet" data-role="page">
 		<div data-role="header">
 			<img src="img/logo4.png" class="logo" alt="PhotoResto" />
-            <a href="#home" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
-            <!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
+			<a href="#home" data-icon="back" data-iconpos="notext" data-ajax="fasle">Back</a>
+			<!--<a data-role="button" class="left button goHome" href="#home"><<</a>-->
 		</div>
 		<div data-role="content">
 			<h2 id="restoName"></h2>
@@ -154,7 +156,7 @@
 			</p>
 			<!-- aller rechercher les commentaires s'il y en a -->
 			<!--décider nos boutons-->
-			
+
 		</div>
 	</div>
 

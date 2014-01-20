@@ -40,9 +40,7 @@ function onDeviceReady() {
 		} else if ($('#photo').contents() == '') {
 			alert('Veuillez soumettre une photo!')
 		} else {
-			alert('Ok!');
-			createNodeResto;
+			createNodeResto();
 		}
-		event.preventDefault();
 	});
 }
