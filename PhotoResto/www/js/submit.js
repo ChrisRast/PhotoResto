@@ -12,7 +12,7 @@ function createNodeResto() {
 	$('#restoName').empty().append(restoName)
 	$('#restoType').empty().append(restoType)
 	$('#restoGrade').empty().append(restoGrade)
-	$('#restoPhoto').empty().children($('img'))
+	$('#restoPhoto').children($('img'))
 		.attr('src', 'data:image/jpeg;base64,' + photoB64)
 		.attr('alt', restoName);
 	$('#restoComment').empty().append(restoComment);
